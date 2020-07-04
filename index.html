@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como dividir o seu dinheiro</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <style>
+        *{
+            margin: 0px;
+        }
+        
+        .img{
+            width: 700px;
+            height: 400px;
+        }
+
+        .info-div{
+            display: flex;
+            flex-direction: row;
+        }
+
+        footer{
+
+            background-color: black;
+            width:100%;
+            height: 20px;
+            font-size: 10px;
+            color: white;
+            font-weight: bold;
+            position:fixed;
+            bottom: 0px;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="info-div">
+        
+        <div class="img" >
+            <canvas id="myChart" ></canvas> 
+        </div>
+
+        <aside>
+            <h1>Como dividir o seu dinheiro</h1>
+            <div class="legends">
+                <ul>
+                    <li>Educação(10%)</li>
+                    <li>Aposentadoria(5%)</li>
+                    <li>Reserva(5%)</li>
+                    <li>Fazer o que quiser(10%)</li>
+                    <li>Sonhos a médio prazo(15%)</li>
+                    <li>Gastos Essenciais(55%)</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+
+    <p>Significado</p>
+    <ul>
+        <li>O dinheiro para a educação é para investimentos em cursos e palestras</li>
+        <li>O dinheiro da Aposentadoria é um complemento do que ja é tirado nos impostos</li>
+        <li>Os sonhos a médio prazo são aqueles sonhos de até 6 meses</li>
+        <li>O dinheiro para fazer o que quiser é auto explicativo</li>
+        <li>Os gastos essenciais é a parte do dinheiro para pagar as contas, passagens, almoço fora, comprar a comida do mês, o desodorante e etc.</li>
+    </ul>
+    </ul>
+
+    <footer>
+        Feito por Wilson
+    </footer>
+       <script>
+        var ctx = document.getElementById('myChart')
+
+        
+
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+
+                    //data:[10,5,5,10,15,55]
+                labels: ['Educação',
+                        'Aposentadoria',
+                        'Reserva',
+                        'Fazer o que quiser',
+                        'Sonhos a Médio Prazo',
+                        'Gastos essenciais'],
+
+                datasets: [{
+                    data: [10,5,5,10,15,55],
+                    backgroundColor:['#34f']
+                }],
+                //
+                
+            },
+
+            options: {
+                
+                
+            }
+        })
+        
+        
+       </script>
+
+    
+</body>
+</html>
